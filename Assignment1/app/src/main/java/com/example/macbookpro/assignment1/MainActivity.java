@@ -1,9 +1,17 @@
 package com.example.macbookpro.assignment1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void resetPassword(View vieew)
+    {
+        Intent i =new Intent(getApplicationContext(), Activity_resetPassword.class);
+        startActivity(i);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
