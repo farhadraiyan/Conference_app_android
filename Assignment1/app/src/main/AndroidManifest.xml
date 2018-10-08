@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_resetPassword"></activity>
+        <activity android:name=".Activity_resetPassword" />
+        <activity android:name=".Activity_MySchedule" />
+        <activity android:name=".Activity_GenSchedule" />
     </application>
 
 </manifest>

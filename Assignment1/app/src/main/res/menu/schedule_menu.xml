@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/ml_map"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="map"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ml_generalSchedule"
+        android:title="allSchedule"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ml_mySchedule"
+        android:title="myschedule"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ml_speakers"
+        android:title="Spekers"
+        app:showAsAction="never" />
+</menu>
