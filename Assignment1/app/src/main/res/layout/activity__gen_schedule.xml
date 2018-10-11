@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8EFFC"
+    android:background="@drawable/background"
     tools:context=".Activity_GenSchedule">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gen schedule"
-        android:textSize="50dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="152dp" />
+    <ListView
+        android:id="@+id/lv_genSchedule"
+        style="@android:style/DeviceDefault.ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationCache="true"
+        android:background="#589DB0"
+        android:scrollbars="vertical" />
 </android.support.constraint.ConstraintLayout>

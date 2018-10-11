@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,10 +24,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //image view
+        ImageView imageV=findViewById(R.id.imgV_logo);
+        imageV.setImageResource(R.drawable.conference);
     }
 
 
