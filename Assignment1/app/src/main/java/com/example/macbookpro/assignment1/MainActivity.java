@@ -12,13 +12,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //this method to go to reset password activity
-    public void resetPassword(View vieew)
+    public void resetPassword(View view)
     {
         Intent i =new Intent(getApplicationContext(), Activity_resetPassword.class);
         startActivity(i);
     }
     //this method for myschedule activity
-    public void mySchedule(View vie)
+    public void mySchedule(View view)
     {
         Intent i=new Intent(getApplicationContext(), Activity_MySchedule.class);
         startActivity(i);

@@ -16,9 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_resetPassword" />
-        <activity android:name=".Activity_MySchedule" />
-        <activity android:name=".Activity_GenSchedule" />
+        <activity android:name=".Activity_resetPassword"
+            android:label="Reset Password"/>
+        <activity android:name=".Activity_MySchedule"
+            android:label="My Schedule"/>
+        <activity android:name=".Activity_GenSchedule"
+            android:label="All"/>
+        <activity android:name=".ConferenceDetails"
+            android:label="Schedule details"/>
+        <activity android:name=".AttendeesList"
+            android:label="Attendees"/>
+        <activity android:name=".Sponsors"
+            android:label="Sponsors"/>
+        <activity android:name=".Twitters"
+            android:label="Twiters"/>
+        <activity android:name=".Activity_Speakers"
+            android:label="Speakers"/>
     </application>
 
 </manifest>

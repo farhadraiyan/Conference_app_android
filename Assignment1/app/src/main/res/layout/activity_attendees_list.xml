@@ -2,18 +2,15 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_schedule"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".Activity_MySchedule">
+    tools:context=".AttendeesList">
 
     <ListView
-        android:id="@+id/lv_myschedule"
+        android:id="@+id/lv_attendees"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
         android:divider="#589DB0"
-        android:dividerHeight="3dp"
-        android:entries="@android:color/holo_green_dark" />
+        android:dividerHeight="3dp" />
 </android.support.constraint.ConstraintLayout>

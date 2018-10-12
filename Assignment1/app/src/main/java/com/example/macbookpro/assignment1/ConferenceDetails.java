@@ -4,18 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.MultiAutoCompleteTextView;
+import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Activity_MySchedule extends AppCompatActivity {
-
+public class ConferenceDetails extends AppCompatActivity {
 
     //this function for menu list in main activity
     @Override
@@ -55,33 +50,25 @@ public class Activity_MySchedule extends AppCompatActivity {
             case R.id.ml_map:
                 Intent imap=new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=160+kendal+avenue+Toronto"));
                 startActivity(imap);
-
             default:return super.onOptionsItemSelected(item);
 
         }
     }
 
-
-    ListView lv_mychedule;
-    List<String> list=new ArrayList<String>();
-    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__my_schedule);
-        lv_mychedule=(ListView) findViewById(R.id.lv_myschedule);
-        list.add("My Workshop\n" +
-                "Date: 27-10-2018\n" +
-                "Time: 10:00am - 12:00pm\n" +
-                "Location: George Brown college, Toronto");
-        list.add("My Workshop\n" +
-                "Date: 27-10-2018\n" +
-                "Time: 10:00am - 12:00pm\n" +
-                "Location: George Brown college, Toronto");
+        setContentView(R.layout.activity_conference_details);
 
-        adapter =new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, list);
-        lv_mychedule.setAdapter(adapter);
+        TextView tv=(TextView) findViewById(R.id.tv_confdet);
+
+        Intent intent =getIntent();
+        String texts=intent.getExtras().getString("data")+"\nDescription: \n";
+        for(int j=0;j<10;j++)
+        {
+            texts+="Here is the description about the conference";
+        }
+        tv.setText(texts);
+
     }
-
-
 }

@@ -4,11 +4,23 @@
 
 
     <item
+        android:id="@+id/ml_attendees"
+        android:title="Attendees"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ml_Twitters"
+        android:title="Twitters"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ml_speakers"
+        android:title="Speakers"
+        android:titleCondensed="Speakers"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/ml_map"
-        android:icon="@android:drawable/ic_menu_mapmode"
-        android:title="map"
-        app:showAsAction="always"
-        />
+        android:title="Maps"
+        android:titleCondensed="Maps"
+        app:showAsAction="always" />
     <item
         android:id="@+id/ml_generalSchedule"
         android:title="allSchedule"
@@ -18,9 +30,6 @@
         android:id="@+id/ml_mySchedule"
         android:title="myschedule"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/ml_speakers"
-        android:title="Spekers"
-        app:showAsAction="never" />
+
 
 </menu>

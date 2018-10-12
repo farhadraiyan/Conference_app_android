@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,8 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity_MySchedule extends AppCompatActivity {
-
+public class Twitters extends AppCompatActivity {
 
     //this function for menu list in main activity
     @Override
@@ -55,33 +53,27 @@ public class Activity_MySchedule extends AppCompatActivity {
             case R.id.ml_map:
                 Intent imap=new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=160+kendal+avenue+Toronto"));
                 startActivity(imap);
-
             default:return super.onOptionsItemSelected(item);
 
         }
     }
 
 
-    ListView lv_mychedule;
+    ListView lv_twitters;
     List<String> list=new ArrayList<String>();
     ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__my_schedule);
-        lv_mychedule=(ListView) findViewById(R.id.lv_myschedule);
-        list.add("My Workshop\n" +
-                "Date: 27-10-2018\n" +
-                "Time: 10:00am - 12:00pm\n" +
-                "Location: George Brown college, Toronto");
-        list.add("My Workshop\n" +
-                "Date: 27-10-2018\n" +
-                "Time: 10:00am - 12:00pm\n" +
-                "Location: George Brown college, Toronto");
+        setContentView(R.layout.activity_twitters);
 
-        adapter =new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, list);
-        lv_mychedule.setAdapter(adapter);
+
+        for(int i=1;i<15;i++)
+        {
+            list.add("Twitters "+i);
+        }
+        lv_twitters=(ListView) findViewById(R.id.lv_twitters);
+        adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
+        lv_twitters.setAdapter(adapter);
     }
-
-
 }
