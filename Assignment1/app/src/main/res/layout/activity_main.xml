@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@drawable/backimage"
+        android:scaleType = "centerCrop"
         android:orientation="vertical">
 
 
@@ -53,11 +54,10 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:background="@drawable/buttonstyle"
             android:onClick="mySchedule"
             android:paddingBottom="10dp"
@@ -69,9 +69,10 @@
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:background="@drawable/buttonstyle"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
@@ -90,7 +91,7 @@
             android:linksClickable="true"
             android:onClick="resetPassword"
             android:text="Forgot Password"
-            android:textColor="#ffffff"
+            android:textColor="#090259"
             android:textSize="18dp"
             android:textStyle="bold" />
     </LinearLayout>
