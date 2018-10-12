@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,10 +16,10 @@
 
         <ImageView
             android:id="@+id/imgV_logo"
-            android:layout_width="133dp"
-            android:layout_height="114dp"
+            android:layout_width="87dp"
+            android:layout_height="54dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             app:srcCompat="@android:drawable/checkbox_off_background" />
 
         <EditText
@@ -33,9 +34,8 @@
             android:gravity="fill_horizontal"
             android:hint="Username"
             android:inputType="textPersonName"
-            android:padding="15dp"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:padding="10dp"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/txt_Password"
@@ -48,18 +48,34 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="15dp"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:padding="10dp"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/buttonstyle"
             android:onClick="mySchedule"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
             android:text="Login"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/buttonstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Register"
             android:textColor="#ffffff"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -69,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:clickable="false"
             android:linksClickable="true"
             android:onClick="resetPassword"
@@ -78,4 +94,4 @@
             android:textSize="18dp"
             android:textStyle="bold" />
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
