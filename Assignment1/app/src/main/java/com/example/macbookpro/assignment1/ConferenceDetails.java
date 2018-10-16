@@ -55,20 +55,32 @@ public class ConferenceDetails extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conference_details);
 
-        TextView tv=(TextView) findViewById(R.id.tv_confdet);
+        //get all textview
+        TextView tvDate=(TextView)  findViewById(R.id.tv_confd_date);
+        TextView tvTime=(TextView)  findViewById(R.id.tv_confd_time);
+        TextView tvTitle=(TextView)  findViewById(R.id.tv_confd_title);
+        TextView tvLocation=(TextView)  findViewById(R.id.tv_confdet_location);
+        TextView tvdesc=(TextView)  findViewById(R.id.tv_confdet_descript);
+        TextView tvattend=(TextView)  findViewById(R.id.tv_confdet_attendences);
 
+        //get the data from gen schedule
         Intent intent =getIntent();
-        String texts=intent.getExtras().getString("data")+"\nDescription: \n";
-        for(int j=0;j<10;j++)
-        {
-            texts+="Here is the description about the conference";
-        }
-        tv.setText(texts);
+        String texts=intent.getExtras().getString("data");
+        //split the data by line
+        helperclass hepler=new helperclass();
+        String[] splittedArray=hepler.strSplitter(texts);
+        tvDate.setText(splittedArray[0]);
+        tvTime.setText(splittedArray[1]);
+        tvTitle.setText(splittedArray[2]);
+        tvLocation.setText(splittedArray[3]);
+        tvdesc.setText(splittedArray[4]);
+        tvattend.setText(splittedArray[5]);
 
     }
 }

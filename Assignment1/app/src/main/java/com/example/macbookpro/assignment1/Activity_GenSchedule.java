@@ -72,38 +72,54 @@ public class Activity_GenSchedule extends AppCompatActivity {
         setContentView(R.layout.activity__gen_schedule);
         lv_genSchedule=(ListView) findViewById(R.id.lv_genSchedule);
         //add items to the list view
-        list.add("Node.js and angular workshop\n" +
-                "Date: 27-10-2018\n" +
+        list.add("Date: 27-10-2018\n" +
                 "Time: 10:00am - 12:00pm\n" +
-                "Location: George Brown college, Toronto");
-        list.add("Data structure and algorithms workshop\n" +
-                "Date: 11-11-2018\n" +
+                "Node.js and angular workshop\n" +
+                "Location: George Brown college, Toronto\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 11-11-2018\n" +
                 "Time: 9:00 - 11:00am\n" +
-                "Location: George Brown college, Toronto");
-        list.add("PHP workshop for advance programmers\n" +
-                "Date: 21-11-2018\n" +
+                "Data structure and algorithms workshop\n" +
+                "Location: George Brown college, Toronto\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 21-11-2018\n" +
                 "Time: 10:00 am - 2:00pm\n" +
-                "Location: York conference hall, York");
-        list.add("Android app developments \n" +
-                "Date: 29-11-2018" +
+                "PHP workshop for advance programmers\n" +
+                "Location: York conference hall, York\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 29-11-2018" +
                 "Time: 5:00 pm - 8:00pm\n" +
-                "Location: Centre for IT, Toronto");
-        list.add("Javascript workshop for Beginners\n" +
-                "Date: 13-12-2018\n" +
+                "Android app developments \n" +
+                "Location: Centre for IT, Toronto\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 13-12-2018\n" +
                 "Time: 9:00 am - 11:00am\n" +
-                "Location: Scarborough IT centre, Scarborough");
-        list.add("Data structure and algorithms workshop\n" +
-                "Date: 15-01-2019\n" +
+                "Javascript workshop for Beginners\n" +
+                "Location: Scarborough IT centre, Scarborough\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 15-01-2019\n" +
                 "Time: 5:00 pm - 7:00mm\n" +
-                "Location: Scarborough IT centre, Scarborough");
-        list.add("Python workshop for advance programmer\n" +
-                "Date: 29-01-2019\n" +
+                "Data structure and algorithms workshop\n" +
+                "Location: Scarborough IT centre, Scarborough\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 29-01-2019\n" +
                 "Time: 5:00 pm - 7:00mm\n" +
-                "Location: Centre for It, Toronto");
-        list.add("Machine Learning \n" +
-                "Date: 29-02-2019\n" +
+                "Python workshop for advance programmer\n" +
+                "Location: Centre for It, Toronto\n"+
+                "Description: \n"+
+                "Attendences:");
+        list.add("Date: 29-02-2019\n" +
                 "Time: 3:00 pm - 7:00mm\n" +
-                "Location: Centre for It, Toronto");
+                "Machine Learning \n" +
+                "Location: Centre for It, Toronto\n"+
+                "Description: \n"+
+                "Attendences:");
 
         adapter =new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, list);
         lv_genSchedule.setAdapter(adapter);

@@ -35,6 +35,7 @@
     <ListView
         android:id="@+id/lv_genSchedule"
         style="@android:style/DeviceDefault.ButtonBar"
+        android:minHeight="?android:attr/listPreferredItemHeight"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
