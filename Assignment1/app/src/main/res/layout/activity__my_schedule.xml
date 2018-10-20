@@ -5,15 +5,394 @@
     android:id="@+id/my_schedule"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backimage"
     tools:context=".Activity_MySchedule">
 
-    <ListView
-        android:id="@+id/lv_myschedule"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:divider="#589DB0"
-        android:dividerHeight="3dp"
-        android:entries="@android:color/holo_green_dark" />
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/layh1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_mysch"
+                    android:layout_width="380dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/textboxstyle"
+                    android:text="Thursday, Oct18 "
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/conf_logo"
+                        android:padding="2dp"
+                        android:text="JS"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title_mysch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/textboxstyle"
+                        android:ems="10"
+                        android:padding="2dp"
+                        android:text="Toronto Javascript Conference"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timeandloc_mysch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textboxstyle"
+                    android:ems="10"
+                    android:paddingLeft="16dp"
+                    android:text="Location: George Brown College, Toronto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layh2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_mysch2"
+                    android:layout_width="380dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/textboxstyle"
+                    android:text="Thursday, Oct18 "
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/conf_logo2"
+                        android:padding="2dp"
+                        android:text="PY"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title_mysch2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/textboxstyle"
+                        android:ems="10"
+                        android:padding="2dp"
+                        android:text="Scarborough Python Bootcamp"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timeandloc_mysch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textboxstyle"
+                    android:ems="10"
+                    android:paddingLeft="16dp"
+                    android:text="Location: Scarborough town hall, Toronto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layh3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_mysch3"
+                    android:layout_width="380dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/textboxstyle"
+                    android:text="Thursday, Oct18 "
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/conf_logo3"
+                        android:padding="2dp"
+                        android:text="JV"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title_mysch3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/textboxstyle"
+                        android:ems="10"
+                        android:padding="2dp"
+                        android:text="Toronto Java Beginners Seminer"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timeandloc_mysch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textboxstyle"
+                    android:ems="10"
+                    android:paddingLeft="16dp"
+                    android:text="Location: University of toronto, Toronto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layh4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="vertical"
+                android:padding="2dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_mysch4"
+                    android:layout_width="380dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/textboxstyle"
+                    android:text="Thursday, Oct18 " />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/conf_logo"
+                        android:padding="2dp"
+                        android:text="PHP"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title_mysch4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/textboxstyle"
+                        android:ems="10"
+                        android:padding="2dp"
+                        android:text="Php codecamp"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timeandloc_mysch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textboxstyle"
+                    android:ems="10"
+                    android:paddingLeft="16dp"
+                    android:text="Location: York Centre, North York" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layh5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="vertical"
+                android:padding="2dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_mysch5"
+                    android:layout_width="380dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/textboxstyle"
+                    android:text="Thursday, Oct18 " />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/conf_logo2"
+                        android:padding="2dp"
+                        android:text="AI"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title_mysch5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/textboxstyle"
+                        android:ems="10"
+                        android:padding="2dp"
+                        android:text="Machine Learning"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timeandloc_mysch5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textboxstyle"
+                    android:ems="10"
+                    android:paddingLeft="16dp"
+                    android:text="Location: Chestnut conference centre, Toronto" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
+
+
+
+
+<!--<FrameLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_gravity="right"-->
+<!--android:layout_margin="8dp"-->
+<!--android:layout_weight="1">-->
+
+<!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/imgV_logo"-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_gravity="left|center_horizontal"-->
+    <!--android:src="@drawable/user2"-->
+    <!--app:civ_border_color="#FFFFF8"-->
+    <!--app:civ_border_width="2dp" />-->
+
+<!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/imgV_logo2"-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:src="@drawable/user1"-->
+    <!--app:civ_border_color="#FFFFF8"-->
+    <!--app:civ_border_width="2dp" />-->
+
+<!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/imgV_logo3"-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginLeft="35dp"-->
+    <!--android:src="@drawable/user2"-->
+    <!--app:civ_border_color="#FFFFF8"-->
+    <!--app:civ_border_width="2dp" />-->
+
+<!--<TextView-->
+    <!--android:id="@+id/tv_msg1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:gravity="right"-->
+    <!--android:text="35 peoples are going" />-->
+<!--</FrameLayout>-->

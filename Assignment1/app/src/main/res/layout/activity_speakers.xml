@@ -5,13 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backimage"
-    tools:context=".Twitters">
+    tools:context=".SpeakersActivity">
 
-    <ListView
-        android:id="@+id/lv_twitters"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:divider="#589DB0"
-        android:dividerHeight="3dp" />
 </android.support.constraint.ConstraintLayout>
