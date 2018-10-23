@@ -40,10 +40,13 @@
             android:name=".Twitters"
             android:label="Twiters" />
         <activity
-            android:name=".Activity_Speakers"
+            android:name=".My_Activity_details"
+            android:label="Activity Detail" />
+
+        <activity
+            android:name=".SpeakersActivity"
             android:label="Speakers" />
-        <activity android:name=".My_Activity_details" />
-        <activity android:name=".SpeakersActivity"></activity>
+        <activity android:name=".BasicActivity"></activity>
     </application>
 
 </manifest>

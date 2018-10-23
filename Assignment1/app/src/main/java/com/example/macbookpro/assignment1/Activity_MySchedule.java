@@ -55,7 +55,7 @@ public class Activity_MySchedule extends AppCompatActivity {
                 startActivity(itwt);
                 return true;
             case R.id.ml_speakers:
-                Intent speak=new Intent(getApplicationContext(), Activity_Speakers.class);
+                Intent speak=new Intent(getApplicationContext(), SpeakersActivity.class);
                 startActivity(speak);
                 return true;
             case R.id.ml_map:

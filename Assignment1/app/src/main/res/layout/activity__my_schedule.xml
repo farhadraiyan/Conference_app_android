@@ -37,7 +37,7 @@
                     android:layout_height="31dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/textboxstyle"
-                    android:text="Thursday, Oct18 "
+                    android:text="Thursday, Nov8 "
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +103,7 @@
                     android:layout_height="31dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/textboxstyle"
-                    android:text="Thursday, Oct18 "
+                    android:text="Friday, Nov16 "
                     app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -167,7 +167,7 @@
                     android:layout_height="31dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/textboxstyle"
-                    android:text="Thursday, Oct18 "
+                    android:text="Thursday, Nov22 "
 
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -233,7 +233,7 @@
                     android:layout_height="31dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/textboxstyle"
-                    android:text="Thursday, Oct18 " />
+                    android:text="Wednesday, Dec5 " />
 
 
                 <LinearLayout
@@ -297,7 +297,7 @@
                     android:layout_height="31dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/textboxstyle"
-                    android:text="Thursday, Oct18 " />
+                    android:text="Thursday, Dec20 " />
 
 
                 <LinearLayout

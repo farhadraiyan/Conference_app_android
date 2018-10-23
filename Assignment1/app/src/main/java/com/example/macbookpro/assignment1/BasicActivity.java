@@ -7,17 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class Activity_Speakers extends AppCompatActivity {
-
-
-
-
+//this activity to hold the menu and all other common functionality shared by other activity
+public class BasicActivity extends AppCompatActivity {
     //this function for menu list in main activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -50,7 +41,7 @@ public class Activity_Speakers extends AppCompatActivity {
                 startActivity(itwt);
                 return true;
             case R.id.ml_speakers:
-                Intent speak=new Intent(getApplicationContext(), Activity_Speakers.class);
+                Intent speak=new Intent(getApplicationContext(), SpeakersActivity.class);
                 startActivity(speak);
                 return true;
             case R.id.ml_map:
@@ -61,25 +52,10 @@ public class Activity_Speakers extends AppCompatActivity {
         }
     }
 
-
-    ListView lv_speakers;
-    List<String> list=new ArrayList<String>();
-    ArrayAdapter<String> adapter;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__speakers);
-
-        lv_speakers=(ListView) findViewById(R.id.lv_speakers);
-        for(int i=0;i<20;i++)
-        {
-            list.add("Mr Jack "+(i+1));
-        }
-        adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, list);
-        lv_speakers.setAdapter(adapter);
+        setContentView(R.layout.activity_basic);
 
     }
 }
