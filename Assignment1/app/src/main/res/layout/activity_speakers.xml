@@ -15,42 +15,474 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+<!--here is starting the hrizontal row for each speakers details-->
+            <!--row 0 search bar-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="2dp"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                android:paddingBottom="8dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="8dp">
+
+                <EditText
+                    android:id="@+id/txt_searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textboxstyle"
+                    android:drawableLeft="@drawable/ic_action_search"
+                    android:ems="10"
+                    android:gravity="fill_horizontal"
+                    android:hint="Search"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/lv_genSchedule"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+            <!--row 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="left"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/textView6"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="TextView" />
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user1"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
-                        android:id="@+id/textView7"
+                        android:id="@+id/tv_speakersHeadr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="right|clip_horizontal"
-                        android:text="TextView" />
+                        android:text="John Doe"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CEO" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Example IT Source" />
                 </LinearLayout>
             </LinearLayout>
+            <!--row 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user2"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jane Doe"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Software developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fortune IT Source" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--row3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user1"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Zack ma"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Software developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fortune IT Source" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--row4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user1"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jack harrold"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Java developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Best IT company" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--row5-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user2"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sofia ann"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Web developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Northwest IT Firm" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--row6-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user2"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tania akter"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Front end developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ABC IT Source" /> />
+                </LinearLayout>
+            </LinearLayout>
+            <!--row7-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/textboxstyle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgV_logo7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left|center_horizontal"
+                            android:src="@drawable/user1"
+                            app:civ_border_color="#FFFFF8"
+                            app:civ_border_width="2dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_speakersHeadr7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Farabi"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrDesc7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Android developer" />
+
+                    <TextView
+                        android:id="@+id/tv_spkrCompany7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Android for all" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--here is end the hrizontal row for each speakers details-->
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

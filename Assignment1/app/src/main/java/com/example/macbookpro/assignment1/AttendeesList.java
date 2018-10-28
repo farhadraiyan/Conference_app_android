@@ -26,7 +26,7 @@ public class AttendeesList extends BasicActivity {
 
         for(int i=1;i<15;i++)
         {
-            list.add("Speaker "+i);
+            list.add("Attendees "+i);
         }
         lv_attendees=(ListView) findViewById(R.id.lv_attendees);
 

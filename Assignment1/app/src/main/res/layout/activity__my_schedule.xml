@@ -85,6 +85,7 @@
                     android:paddingLeft="16dp"
                     android:text="Location: George Brown College, Toronto" />
 
+
             </LinearLayout>
 
             <LinearLayout
