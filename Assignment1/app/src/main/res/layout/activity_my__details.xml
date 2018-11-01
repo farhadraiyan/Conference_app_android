@@ -88,7 +88,7 @@
 
             <!--start of second horizontal layout for image and logo for speakers, attendees...-->
 
-        <LinearLayout
+            <LinearLayout
             android:id="@+id/layh3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
