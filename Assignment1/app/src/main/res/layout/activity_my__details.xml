@@ -7,19 +7,17 @@
     android:background="@drawable/backimage"
     tools:context=".My_Activity_details">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false">
+        android:clipToPadding="false"><!-- start parent vertical scroll view-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="5dp">
+            android:padding="5dp"><!-- start parent sroll view's vertical layout-->
 
-<!--this linear layout for images-->
 
 
             <LinearLayout
@@ -30,7 +28,7 @@
                 android:background="@drawable/textboxstyle"
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="8dp">
+                tools:layout_editor_absoluteX="8dp"><!--start first horizontal layout for title, conf logo, location ant time-->
 
                 <TextView
                     android:id="@+id/tv_date_mysch"
@@ -86,113 +84,153 @@
                     android:paddingLeft="16dp"
                     android:text="Location: George Brown College, Toronto" />
 
-            </LinearLayout>
+            </LinearLayout><!--end first horizontal layout for title, conf logo, location ant time-->
 
-            <LinearLayout
+            <!--start of second horizontal layout for image and logo for speakers, attendees...-->
+
+        <LinearLayout
+            android:id="@+id/layh3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/textboxstyle"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp">
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:background="@drawable/textboxstyle"
-                android:orientation="horizontal">
+                android:clipToPadding="false">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical"
-                    android:padding="5dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imgV_logo1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left|center_horizontal"
-                        android:src="@drawable/speakers"
-                        app:civ_border_color="#FFFFF8"
-                        app:civ_border_width="2dp" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imgV_logo2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left|center_horizontal"
-                        android:src="@drawable/sponsors"
-                        app:civ_border_color="#FFFFF8"
-                        app:civ_border_width="2dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:onClick="speakerActivity"
+                            android:padding="5dp">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imgV_logo3"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left|center_horizontal"
-                        android:src="@drawable/attendees"
-                        app:civ_border_color="#FFFFF8"
-                        app:civ_border_width="2dp" />
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgV_logo1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/speakers"
+                                app:civ_border_color="#FFFFF8"
+                                app:civ_border_width="2dp" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imgV_logo4"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left|center_horizontal"
-                        android:src="@drawable/twiters"
-                        app:civ_border_color="#FFFFF8"
-                        app:civ_border_width="2dp" />
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/textboxstyle"
+                                android:text="Speakers"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:onClick="sponsorsActivity"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgV_logo2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/sponsors"
+                                app:civ_border_color="#FFFFF8"
+                                app:civ_border_width="2dp" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/textboxstyle"
+                                android:text="Sponsors"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:onClick="attendeesActivity"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgV_logo3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/attendees"
+                                app:civ_border_color="#FFFFF8"
+                                app:civ_border_width="2dp" />
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/textboxstyle"
+
+                                android:text="Attendees"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:onClick="twitterActivity"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgV_logo4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/twiters"
+                                app:civ_border_color="#FFFFF8"
+                                app:civ_border_width="2dp" />
+
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/textboxstyle"
+                                android:text="Twitter"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="right"
-                    android:orientation="vertical">
+                <!--end of second horizontal layout for image and logo for speakers, attendees...-->
+            </HorizontalScrollView>
+        </LinearLayout>
 
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/textboxstyle"
-                        android:onClick="speakerActivity"
-                        android:text="Speakers"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/textboxstyle"
-                        android:onClick="sponsorsActivity"
-                        android:text="Sponsors"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/textboxstyle"
-                        android:onClick="attendeesActivity"
-                        android:text="Attendees"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/textboxstyle"
-                        android:onClick="twitterActivity"
-                        android:text="Twitter"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
+            <!--start of last horizontal layout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -210,9 +248,9 @@
                     android:textSize="16sp" />
 
 
-            </LinearLayout>
+            </LinearLayout> <!--end of last horizontal layout-->
 
 
-        </LinearLayout>
-    </ScrollView>
+        </LinearLayout> <!-- end parent sroll view's vertical layout-->
+    </ScrollView><!-- end parent vertical scroll view-->
 </android.support.constraint.ConstraintLayout>
